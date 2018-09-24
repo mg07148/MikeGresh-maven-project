@@ -29,7 +29,7 @@ pipeline {
             parallel {
                 stage('Deploy to Staging') {
                     steps {
-                        bat "winscp.com -i /home/Development/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps1"
+                        bat "winscp.com -i /home/Development/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                     }
                 }
             }
